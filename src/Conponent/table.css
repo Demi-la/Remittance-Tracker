@@ -1,0 +1,38 @@
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.actions {
+  display:flex;
+  justify-content: space-between;
+  width:80%;
+  margin:auto;
+  /* gap: 20rem; */
+}
+td,
+th {
+  padding: 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid #cde1e3;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 2rem 1rem 0 1rem;
+
+  
+}
+.tableHeader {
+  background-color: #2d416f;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 4rem;
+}
+.tableBody {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #2d416f;
+}
