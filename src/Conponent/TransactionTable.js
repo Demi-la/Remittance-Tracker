@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-table";
 import { useState } from "react";
 import AddTransactions from "./modal/AddTransactions";
+import { CiSearch } from "react-icons/ci";
 import "./table.css";
 
 const TransactionTable = ({ data, columns }) => {
@@ -26,12 +27,20 @@ const TransactionTable = ({ data, columns }) => {
   return (
     <div>
       <div className="actions">
-        <input
-          type="text"
-          value={filtering}
-          onChange={(e) => setFiltering(e.target.value)}
-        />
+        <div className="searchWrapper">
+          <input
+            type="text"
+            value={filtering}
+            placeholder="Search....."
+            onChange={(e) => setFiltering(e.target.value)}
+            className="searchInput"
+          />
+          <button className="searchBTN">
+            <CiSearch />
+          </button>
+        </div>
         <button
+        className="addButton"
           onClick={() => {
             setModalOpen(true);
           }}

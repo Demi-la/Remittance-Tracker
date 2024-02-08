@@ -12,7 +12,7 @@ const modalStyle = {
     backgroundColor: "rgba(0, 0, 0, 0.45)",
   },
   content: {
-    inset: "70px",
+    inset: "90px",
     width: "20rem",
     margin: "auto",
     border: "none",
@@ -54,7 +54,7 @@ const EditTransactions = ({ isOpen, onCloseModal, id }) => {
     <ReactModal isOpen={isOpen} style={modalStyle}>
       <div className="container">
         <div className="header">
-          <h2 className="modalTitle">Add Transactions</h2>
+          <h2 className="modalTitle">Edit Transaction</h2>
           <span onClick={() => onCloseModal(false)}>X</span>
         </div>
 
@@ -87,8 +87,8 @@ const EditTransactions = ({ isOpen, onCloseModal, id }) => {
                 onChange={onExistingAmount}
               />
             </div>
-            <button onClick={handleSave} type="button">
-              Submit
+            <button onClick={handleSave} type="button" className="saveButton">
+              Save
             </button>
           </form>
         </div>

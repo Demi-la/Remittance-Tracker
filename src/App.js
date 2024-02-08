@@ -104,7 +104,7 @@ function App() {
 
   return (
     <div>
-      <h1>Remittance Transaction</h1>
+      <h1 id="title">Remittance Transactions</h1>
 
       {loggedIn ? (
         <TransactionTable data={data} columns={transactionsColumns} />

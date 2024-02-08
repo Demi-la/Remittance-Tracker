@@ -7,9 +7,10 @@
 .actions {
   display:flex;
   justify-content: space-between;
-  width:80%;
-  margin:auto;
-  /* gap: 20rem; */
+  width:75%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 2rem;
 }
 td,
 th {
@@ -20,12 +21,12 @@ th {
 table {
   border-collapse: collapse;
   width: 80%;
-  margin: 2rem 1rem 0 1rem;
+  margin: 1rem 1rem 0 1rem;
 
   
 }
 .tableHeader {
-  background-color: #2d416f;
+  background-color:  rgb(75, 75, 170);
   color: white;
   font-size: 0.875rem;
   font-weight: 500;
@@ -35,4 +36,39 @@ table {
   font-size: 0.8rem;
   font-weight: 400;
   color: #2d416f;
+}
+.searchWrapper {
+  display: flex;
+  border-radius: 0.3rem;
+  border: 0.8px solid  rgb(75, 75, 170);
+  width: 17.7rem;
+  height: 2.5rem;
+
+}
+.searchInput{
+  width: 17.7rem;
+  margin: 0;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+ 
+}
+.searchBTN {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: none;
+  background-color: rgb(75, 75, 170);
+  border: 1px solid  rgb(75, 75, 170);
+  border-radius: 0rem 0.3rem 0.3rem 0rem;
+   color: white;
+   font-size: 1rem;
+   outline: none;
+}
+.addButton {
+  background-color:  rgb(75, 75, 170);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }

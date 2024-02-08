@@ -9,7 +9,7 @@ const modalStyle = {
     backgroundColor: "rgba(0, 0, 0, 0.45)",
   },
   content: {
-    inset: "70px",
+    inset: "90px",
     width: "20rem",
     margin: "auto",
     border: "none",
@@ -43,7 +43,7 @@ const AddTransactions = ({ isOpen, onCloseModal }) => {
     <ReactModal isOpen={isOpen} style={modalStyle}>
       <div className="container">
         <div className="header">
-          <h2 className="modalTitle">Add Transactions</h2>
+          <h2 className="modalTitle">Add Transaction</h2>
           <span onClick={() => onCloseModal(false)}>X</span>
         </div>
 
@@ -76,7 +76,7 @@ const AddTransactions = ({ isOpen, onCloseModal }) => {
                 onChange={onAmountChange}
               />
             </div>
-            <button onClick={handleSubmit} disabled={!canSubmit} type="button">
+            <button onClick={handleSubmit} disabled={!canSubmit} type="button" className="submitButton">
               Submit
             </button>
           </form>

@@ -4,7 +4,7 @@ import { FiEdit } from "react-icons/fi";
 const Edit = ({id, handleEdit}) => {
   return (
     <div>
-      <FiEdit onClick={() => handleEdit(id)} />
+      <FiEdit onClick={() => handleEdit(id)} style={{ cursor: "pointer" }} />
     </div>
   );
 }

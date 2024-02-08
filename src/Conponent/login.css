@@ -1,0 +1,29 @@
+.loginContainer {
+    box-sizing: border-box;
+    width: 30%;
+    margin: auto;
+    padding: 0rem 2rem 2rem 1rem;
+    border:2px solid rgb(75, 75, 170);
+    margin-top: 2rem;
+}
+.input {
+    padding:1rem  3rem 1rem 0.5rem;
+    border:2px solid rgb(75, 75, 170);
+    outline: none;
+}
+.loginContainer div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 1rem 0;
+}
+.loginButton {
+  background-color: rgb(75, 75, 170);
+  color: white;
+  border: none;
+  padding: 1rem 3rem 1rem 4rem;
+  border-radius: 5px;
+  width: 100%;
+}
+label {
+    margin-bottom: 0.5rem;
+}

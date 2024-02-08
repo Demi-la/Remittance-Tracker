@@ -10,27 +10,35 @@
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 1.5rem;
-
 }
 .header {
   display: flex;
   justify-content: space-between;
   color: #2d416f;
   font-weight: 700;
-  
 }
 span {
   position: absolute;
   top: 15px;
   right: 15px;
+  cursor: pointer;
 }
 .ModalContent input {
-   padding:1rem  3rem 1rem 3rem;
-
-    
+  padding: 1rem 3rem 1rem 0.5rem;
+  outline: none;
+  border:2px solid rgb(75, 75, 170);
 }
-.ModalContent div{
- display:flex;
-flex-direction: column;
-   margin: 1rem 0 1rem 0;
+.ModalContent div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 1rem 0;
+}
+.submitButton,
+.saveButton {
+  background-color: rgb(75, 75, 170);
+  color: white;
+  border: none;
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 5px;
+  width: 100%;
 }

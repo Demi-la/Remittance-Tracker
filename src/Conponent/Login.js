@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import "./login.css"
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -16,7 +17,7 @@ const initialValues = {
 
 const Login = ({ handleSubmit }) => {
   return (
-    <div>
+    <div className="loginContainer">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -28,7 +29,13 @@ const Login = ({ handleSubmit }) => {
           <Form>
             <div>
               <label htmlFor="email">Email</label>
-              <Field type="email" name="email" id="email" placeholder="Email" />
+              <Field
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                className="input"
+              />
               <ErrorMessage name="email" component="p" />
             </div>
             <div>
@@ -38,10 +45,11 @@ const Login = ({ handleSubmit }) => {
                 name="password"
                 id="password"
                 placeholder="Password"
+                className="input"
               />
               <ErrorMessage name="password" component="p" />
             </div>
-            <button type="submit" disabled={isSubmitting}>
+            <button className="loginButton" type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Logging in..." : "Login"}
             </button>
           </Form>
