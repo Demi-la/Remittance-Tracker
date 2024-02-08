@@ -25,8 +25,9 @@ const AddTransactions = ({ isOpen, onCloseModal }) => {
   const onSenderChange = (e) => setSender(e.target.value);
   const onRecipientChange = (e) => setRecipient(e.target.value);
   const onAmountChange = (e) => setAmount(e.target.value);
+const canSubmit =
+  sender.trim() !== "" && recipient.trim() !== "" && amount.trim() !== "";
 
-  const canSubmit = Boolean(sender) && Boolean(recipient) && Boolean(amount);
 
   const handleSubmit = (event) => {
     event.preventDefault();

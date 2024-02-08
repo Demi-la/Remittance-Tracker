@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [
+const initialState = JSON.parse(localStorage.getItem("transactions")) || [
   {
     id: 1,
     sender: "Tope Alabi",
@@ -44,6 +44,7 @@ const transactionsSlice = createSlice({
     addedTransactions: {
       reducer(state, action) {
         state.push(action.payload);
+        localStorage.setItem("transactions", JSON.stringify(state));
       },
       prepare(sender, recipient, amount, id) {
         lastUsedId++;
@@ -66,6 +67,7 @@ const transactionsSlice = createSlice({
         updatedTransaction.sender = sender;
         updatedTransaction.recipient = recipient;
         updatedTransaction.amount = amount;
+         localStorage.setItem("transactions", JSON.stringify(state));
       }
     },
   },

@@ -36,7 +36,9 @@ const Login = ({ handleSubmit }) => {
                 placeholder="Email"
                 className="input"
               />
-              <ErrorMessage name="email" component="p" />
+              <p style={{ color: "red" }}>
+                <ErrorMessage name="email" />
+              </p>
             </div>
             <div>
               <label htmlFor="password">Password</label>
@@ -47,9 +49,15 @@ const Login = ({ handleSubmit }) => {
                 placeholder="Password"
                 className="input"
               />
-              <ErrorMessage name="password" component="p" />
+              <p style={{ color: "red" }}>
+                <ErrorMessage name="password" />
+              </p>
             </div>
-            <button className="loginButton" type="submit" disabled={isSubmitting}>
+            <button
+              className="loginButton"
+              type="submit"
+              disabled={isSubmitting}
+            >
               {isSubmitting ? "Logging in..." : "Login"}
             </button>
           </Form>

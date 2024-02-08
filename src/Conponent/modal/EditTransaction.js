@@ -49,7 +49,10 @@ const EditTransactions = ({ isOpen, onCloseModal, id }) => {
     onCloseModal(false);
   };
 
-  // const canSubmit = Boolean(sender) && Boolean(recipient) && Boolean(amount);
+ const canSave =
+   existingSender.trim() !== "" &&
+   existingRecipient.trim() !== "" &&
+   existingAmount.trim() !== "";
   return (
     <ReactModal isOpen={isOpen} style={modalStyle}>
       <div className="container">
@@ -87,7 +90,12 @@ const EditTransactions = ({ isOpen, onCloseModal, id }) => {
                 onChange={onExistingAmount}
               />
             </div>
-            <button onClick={handleSave} type="button" className="saveButton">
+            <button
+              onClick={handleSave}
+              disabled={!canSave}
+              type="button"
+              className="saveButton"
+            >
               Save
             </button>
           </form>
