@@ -1,15 +1,17 @@
 import "./App.css";
 import { useMemo } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import TransactionTable from "./Conponent/TransactionTable";
 import { allTransactions } from "./redux/transactionsSlice";
 import { useState, useEffect } from "react";
 import EditTransactions from "./Conponent/modal/EditTransaction";
 import Login from "./Conponent/Login";
 import Edit from "./Conponent/Edit";
+import { deleteTransactions } from "./redux/transactionsSlice";
 
 function App() {
   const transactions = useSelector(allTransactions);
+  const dispatch = useDispatch()
   const data = useMemo(() => {
     return transactions.map((transaction) => ({
       id: transaction.id,
@@ -22,10 +24,15 @@ function App() {
   const [loginSuccess, setLoginSuccess] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [editId, setEditId] = useState(transactions[0].id);
+  const [deleteId, setDeleteId] = useState(transactions[0].id);
 
   const handleEdit = (id) => {
     setOpenModal(true);
     setEditId(id);
+  };
+  
+  const handleDelete = (id) => {
+    dispatch(deleteTransactions({id: id}))
   };
 
   const transactionsColumns = [
@@ -55,6 +62,7 @@ function App() {
           <Edit
             handleEdit={() => handleEdit(info.getValue())}
             id={info.getValue()}
+            handleDelete={handleDelete}
           />
 
           {openModal && (
